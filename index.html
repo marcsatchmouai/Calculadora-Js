@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link href="/styles/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="calc">
+            <div class="screen">
+                <div class="scOper" id="scOper"></div>
+                <div class="scResult" id="scResult"></div>
+
+                <select name="scHistory" 
+                        class="scHistory" 
+                        id="scHistory">
+                    <option value="">Seleccione Valor Memoria …</option>    
+                    <option id="scH1"></option>
+                    <option id="scH2"></option>
+                    <option id="scH3"></option>
+                    <option id="scH4"></option>
+                    <option id="scH5"></option>
+                </select>
+            </div>
+        
+            <div class="cleanButton" id="borrar">AC</div>
+            <div class="freeButton" id="free1"></div>
+            <div class="freeButton" id="free2"></div>
+            <div class="opButton" id="dividir">÷</div>
+
+            <div class="numButton" id="siete">7</div>
+            <div class="numButton" id="ocho">8</div>
+            <div class="numButton" id="nueve">9</div>
+            <div class="opButton" id="mult">x</div>
+
+            <div class="numButton" id="cuatro">4</div>
+            <div class="numButton" id="cinco">5</div>
+            <div class="numButton" id="seis">6</div>
+            <div class="opButton" id="rest">-</div>
+
+            <div class="numButton" id="uno">1</div>
+            <div class="numButton" id="dos">2</div>
+            <div class="numButton" id="tres">3</div>
+            <div class="opButton" id="sumar">+</div>
+
+            <div class="numButton" id="cero">0</div>
+            <div class="pointButton" id="punto">.</div>
+            <div class="resultButton" id="igual">=</div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="/js/app.js" ></script>
+</body>
+</html>
