@@ -63,12 +63,12 @@ function Calculadora () {
     this.onClickFunction = function (event) {
         if (end) {
             scOper.innerText = '';
-            scResult.innerText = '';
             end=false;
+            console.log(event.target.textContent)
+            
+            scResult.innerText = '';
         }; 
-        if (scOper.innerText.length < 12) {
-            scOper.innerText += event.target.textContent;
-        }
+        scOper.innerText += event.target.textContent;
     }
 
     this.onClickOperator = function (event) {
@@ -80,6 +80,20 @@ function Calculadora () {
             scOper.innerText += event.target.textContent;
             op = event.target.textContent;
         }
+
+        if (end) {
+            scOper.innerText = '';
+            end=false;
+            if(event.target.textContent == "+" || 
+               event.target.textContent == "-" ||
+               event.target.textContent == "÷" ||
+               event.target.textContent == "x") {
+                scOper.innerText = scResult.innerText + event.target.textContent
+                op = event.target.textContent; 
+            }
+            scResult.innerText = '';
+        }; 
+        
     }
     
     this.Mem = function () {
@@ -92,7 +106,6 @@ function Calculadora () {
     
     this.resultFunction = function (event) {
         let cuenta = scOper.innerText.split(op);
-        
         let num1 = parseFloat(cuenta[0]);
         let num2 = parseFloat(cuenta[1]);
         
@@ -114,7 +127,13 @@ function Calculadora () {
         default:
             break  
         }
-        scResult.innerText = result;
+
+        if(isNaN(result)) {
+            scResult.innerText = "Error";
+        } else {
+            scResult.innerText = result;
+        }
+        
         end = true;
         hOrd += 1;
         
@@ -122,7 +141,6 @@ function Calculadora () {
             switch (hOrd) {
                 case 1:
                     scH1.innerText = result;
-                    
                     break
                 case 2:
                     scH2.innerText = result;

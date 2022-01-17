@@ -14,7 +14,7 @@
 
 .screen {
     width: 350px;
-    height: 150px;
+    height: 160px;
     background-color: rgb(255, 255, 255);
 }
 
@@ -38,12 +38,13 @@
 
 .scOper {
     width: 350px;
-    height: 50px;
+    height: 60px;
     background-color: rgb(202, 201, 201);
     text-align: left;
     font-family: 'Russo One', sans-serif;
     font-size: 30px;
     color:rgb(60, 63, 63);
+    overflow-x: scroll;
 }
 
 .scResult {
@@ -54,7 +55,7 @@
     font-family: 'Russo One', sans-serif;
     font-size: 40px;
     color:rgb(60, 63, 63);
-    overflow:auto;
+    overflow-x: scroll;
 }
 
 .numButton {
