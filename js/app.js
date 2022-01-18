@@ -2,6 +2,7 @@
 let op = '';
 let hOrd = 0;
 let end = false;
+const operators = ["+", "-", "÷", "x"];
 
 window.onload = function () {
 
@@ -84,13 +85,12 @@ function Calculadora () {
         if (end) {
             scOper.innerText = '';
             end=false;
-            if(event.target.textContent == "+" || 
-               event.target.textContent == "-" ||
-               event.target.textContent == "÷" ||
-               event.target.textContent == "x") {
+
+            if(operators.indexOf(event.target.textContent) != -1)  {
                 scOper.innerText = scResult.innerText + event.target.textContent
                 op = event.target.textContent; 
             }
+            
             scResult.innerText = '';
         }; 
         
